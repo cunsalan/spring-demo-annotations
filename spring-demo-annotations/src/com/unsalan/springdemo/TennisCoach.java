@@ -1,22 +1,21 @@
 package com.unsalan.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 
+	@Autowired
+	@Qualifier("happyFortuneService")
 	private FortuneService fortuneService;
 	private String email;
 	private String phone;
 	
 	public TennisCoach() {
 		System.out.println(">> inside default constructor");
-	}
-	
-	
-	
-	
+	}	
 	
 	/*
 	public TennisCoach(FortuneService fortuneService) {
@@ -24,17 +23,13 @@ public class TennisCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 	*/
-
-	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("inside setter method for fortune service");
+	/*
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println("inside setter method for doSomeCrazyStuff");
 		this.fortuneService = fortuneService;
 	}
-
-
-
-
-
+	*/
+	
 	@Override
 	public String getDailyWorkOut() {
 		// TODO Auto-generated method stub

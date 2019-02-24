@@ -11,4 +11,10 @@ public class TottoFortuneService implements FortuneService {
 		return "O my God You Have Won The Totte Lotery";
 	}
 
+	@Override
+	public String getFortuneBest() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

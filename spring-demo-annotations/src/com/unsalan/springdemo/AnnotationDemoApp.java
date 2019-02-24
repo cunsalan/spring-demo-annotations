@@ -18,6 +18,8 @@ public class AnnotationDemoApp {
 		
 		System.out.println(theCoach.getDailyWorkOut());
 		
+		System.out.println(theCoach.getDailyFortune());
+		
 		// close the contex
 		
 		context.close();
